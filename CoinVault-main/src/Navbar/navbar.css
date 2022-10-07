@@ -1,0 +1,42 @@
+.navbar-box {
+  background-color: rgb(66, 37, 211, 1);
+}
+.Navbar {
+  /* padding-right: 3vw; */
+  height: 7vh;
+  display: flex;
+  padding: 1vw;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  /* background: rgba(78, 43, 255, 1); */
+}
+.navBar-links {
+  color: white;
+  font-size: 1.5vw;
+  font-family: "Outfit", sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  margin: 1vw;
+  position: relative;
+  opacity: 0.9;
+}
+#navBar-links-icon {
+  margin-left: 2vw;
+  font-size: 3vw;
+  font-family: "Outfit", sans-serif;
+}
+.navBar-links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: gold;
+  transition: all 0.5s;
+}
+
+.navBar-links:hover::before {
+  width: 100%;
+}

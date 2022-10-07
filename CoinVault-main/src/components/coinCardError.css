@@ -1,0 +1,40 @@
+.error-questionmark {
+  color: black;
+}
+.data-content-error-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+.data-content-header {
+  padding-left: 0px;
+  font-family: "Outfit", sans-serif;
+  font-size: 2vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+#coin-inner-boxes-header {
+  justify-content: space-between;
+}
+#coin-inner-boxes-header-error {
+  justify-content: center;
+}
+.data-content-error-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+.data2-content-fonts {
+  font-size: 1.6vw;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
+.data2-content-results-fonts {
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  font-size: 1.5vw;
+}

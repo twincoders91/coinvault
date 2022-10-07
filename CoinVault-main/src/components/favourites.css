@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;700;800&display=swap");
+
+.favourite {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../assets/cryptoBackground2.jpeg") no-repeat center
+    center/cover;
+}
+/* ========================= Card Button ========================= */
+.coin-container-button-box {
+  display: flex;
+  justify-content: right;
+  margin-right: 1%;
+}
+
+/* ========================= Watch List Card ========================= */
+.watchlist-card-main-box {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+.watchlist-card-box {
+  width: 70vw;
+  margin-left: 14.3vw;
+  background-color: rgb(85 52 255);
+  box-shadow: 0px 4px 5px #18191b;
+  border: black 3px solid;
+  margin-top: 4%;
+  padding: 2%;
+  padding-bottom: 1%;
+  border-radius: 0;
+}
+.watchlist-card-box-favourite {
+  width: 70vw;
+  /* margin-left: 15vw; */
+  background-color: rgb(85 52 255);
+  box-shadow: 0px 4px 5px #18191b;
+  border: black 3px solid;
+  margin-top: 4%;
+  padding: 2%;
+  padding-bottom: 1%;
+  border-radius: 0;
+}
+
+.watchlist-card-row {
+  /* max-width: 100%; */
+  margin-bottom: 1%;
+  padding: 0 3vw;
+  display: grid;
+  grid-template-columns: repeat(6, 15%);
+  justify-content: center;
+  grid-gap: 2vw;
+  background-color: orange;
+  box-shadow: 0px 4px 5px #18191b;
+  border: black 3px solid;
+  color: white;
+  font-size: 1.5vw;
+}
+.watchList-individual-rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3vw;
+  margin-bottom: 1vh;
+  background-color: gold;
+  border: black 3px solid;
+}
+.watchlist-inner-card-box {
+  display: grid;
+  grid-template-columns: repeat(6, 15%);
+  grid-gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  font-size: 1vw;
+}
+.watchList-individual-rows:hover {
+  transform: scale(1);
+  background-color: rgba(78, 43, 255, 0.8);
+}
+
+.watchlist-header-fonts {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 1.5vw;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  color: black;
+  text-decoration: underline;
+}
+#watchlist-header-fonts-rank {
+  color: black;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+}
+#watchlist-header-fonts-rank-hashtag {
+  color: black;
+  font-size: 2vw;
+  margin-left: 0.5vw;
+  text-decoration: none;
+}
+.watchlist-delete-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.watchlist-delete-icon {
+  color: black;
+  scale: 1.2;
+  cursor: pointer;
+  margin-left: 1vw;
+}
+.watchlist-delete-icon:hover {
+  transform: scale(1.1);
+  color: red;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -0.5px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-0.5px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+  40% {
+    transform: translate(0.5px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 0.5px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-0.5px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(0.5px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-0.5px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 0.5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -0.5px) rotate(-1deg);
+  }
+}
+.watchlist-fonts {
+  display: flex;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  color: black;
+  font-weight: bolder;
+  align-items: center;
+}
+.coin-image-watchlist {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 20%;
+  width: 20%;
+  margin-right: 0.5vw;
+}
+.price-change {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.watchlist-fonts-red {
+  display: flex;
+  justify-content: center;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+  color: red;
+  margin-right: 1vw;
+}
+.watchlist-fonts-green {
+  display: flex;
+  justify-content: center;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+  color: rgb(14 216 14);
+  margin-right: 1vw;
+  font-size: 1.3vw;
+}
+.watchlist-pricechange-icon-red {
+  color: rgb(255, 1, 1);
+}
+.watchlist-pricechange-icon-red:hover {
+  transform: scale(1.5);
+  color: white;
+  cursor: pointer;
+}
+.watchlist-pricechange-icon-green {
+  color: rgb(14 216 14);
+}
+.watchlist-pricechange-icon-green:hover {
+  transform: scale(1.5);
+  color: white;
+  cursor: pointer;
+}
+.watchlist-pricechange-icon-orange {
+  color: rgb(255, 221, 0);
+}
+.watchlist-fonts-error {
+  display: flex;
+  justify-content: center;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+  color: rgb(255, 1, 1);
+}
+
+/* ========================== Chart CSS ========================== */
+.favourite-chart {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(37, 37, 37, 0.8);
+  border-radius: 8px;
+}
+
+/* ========================== ERROR ========================== */
+.favourite-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.watchlist-card-box-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50vw;
+  background-color: rgb(85 52 255);
+  box-shadow: 0px 4px 5px #18191b;
+  border: black 3px solid;
+  margin-top: 2%;
+  padding: 2%;
+  padding-bottom: 1%;
+}
+.watchlist-card-box-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 95%;
+  background-color: gold;
+  border: 3px black solid;
+  width: 100%;
+  padding: 1vw;
+  font-family: "Outfit", sans-serif;
+  color: black;
+  text-align: center;
+}
+.watchlist-card-font-header {
+  font-size: 2vw;
+}
+.minidescription {
+  font-size: 1.2vw;
+  font-weight: normal;
+}
+.watchlist-card-box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.errorimage {
+  width: 50%;
+}

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.home-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.25rem;
+  min-height: 150vh;
+  background: url("../assets/cryptoBackground2.jpeg") no-repeat center
+    center/cover;
+  height: fit-content;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+.cardscontainer {
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+  width: 80vw;
+  height: 80vh;
+  margin-top: 5%;
+}
+.cards {
+  background-color: rgb(85 52 255);
+  box-shadow: 0px 1px 2px #18191b;
+  border: black 3px solid;
+  padding: 10px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  width: 40%;
+  height: 90%;
+  transition: width 0.5s, height 0.5s, transform 0s;
+}
+#cards-left:hover {
+  scale: 1.05;
+  background-color: rgb(85, 52, 255, 0.9);
+  transform: rotate(-1deg);
+}
+#cards-right:hover {
+  scale: 1.05;
+  background-color: rgb(85, 52, 255, 0.9);
+  transform: rotate(1deg);
+}
+.marketplace-image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.marketplace-image:hover {
+  cursor: pointer;
+}
+.vault-image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.marketplace-image {
+  height: 100%;
+  transition: width 2s, height 2s, transform 1.5s;
+}
+.marketplace-image:hover {
+  height: 110%;
+  filter: hue-rotate(192deg);
+  transform: rotate(10deg);
+}
+.vault-image {
+  height: 100%;
+  transition: width 2s, height 2s, transform 1.5s;
+}
+.vault-image:hover {
+  height: 110%;
+  transform: rotate(-10deg);
+  filter: hue-rotate(280deg);
+}
+.header-fonts {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.5vw;
+  margin: auto;
+  margin-bottom: 1vh;
+}
+.description {
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  display: flex;
+  text-align: justify;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-top: 2.5vh;
+}
+.description2 {
+  border: 3px black solid;
+  background-color: gold;
+  display: flex;
+  text-align: justify;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-top: 1vh;
+}
+.description-fonts {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.3vw;
+  font-weight: normal;
+}
+.coin-choices-row {
+  background-color: gold;
+  border: black 3px solid;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  margin: auto;
+  margin-top: 1.5vh;
+}
+.coin-icons:hover {
+  cursor: pointer;
+}
+.bold-fonts {
+  font-weight: bolder;
+}
+.button-box {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px black solid;
+  padding-top: 0vh;
+  padding-bottom: 0vh;
+}

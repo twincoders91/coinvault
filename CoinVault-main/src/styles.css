@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.App {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.25rem;
+  min-height: 150vh;
+  background: url("./assets/cryptoBackground2.jpeg") no-repeat center
+    center/cover;
+  height: fit-content;
+  background-attachment: fixed;
+}
+body {
+  margin: 0;
+}
+
+/* ========================= HEADER related ========================= */
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+  font-size: 3vw;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Arsenal", sans-serif;
+}
+.span1:hover {
+  color: white;
+}
+.span1 {
+  color: gold;
+  font-weight: bolder;
+  font-family: "Outfit", sans-serif;
+}
+/* ================================================================== */
+
+/* ========================= MAIN-BOX related ========================= */
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+.search--input {
+  border: solid 2px black;
+  text-transform: lowercase;
+  background-color: rgb(255, 215, 0, 0.9);
+  font-family: "Outfit", sans-serif;
+  color: black;
+  font-weight: bolder;
+  width: 30vw;
+  padding: 0.5vw;
+  font-size: 1.2vw;
+}
+.search--input:hover {
+  color: black;
+  background-color: rgba(71, 36, 250, 0.8);
+  border: 2px solid rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  font-family: "Outfit", sans-serif;
+  font-weight: bolder;
+}
+/* ========================= SIDE BAR related ========================= */
+.main-body-with-sidebar-coincard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  width: 100%;
+}
+.sidebar-box {
+  width: 10vw;
+  margin-right: 8vw;
+  margin-left: 2vw;
+}
+.favouritebar-box {
+  width: 15vw;
+  margin-left: 8vw;
+}
+.favourite-coin-icon {
+  margin-right: 20%;
+}
+
+.nav {
+  background-color: rgb(85 52 255);
+  border: 3px black solid;
+  box-shadow: 0px 4px 8px #000000;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.nav-favourite {
+  background-color: rgb(85 52 255);
+  border: 3px black solid;
+  box-shadow: 0px 4px 8px #000000;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.topCoin-header {
+  margin: auto;
+  margin-bottom: 1vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 2vw;
+  color: black;
+  font-weight: bolder;
+}
+.ranking-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px black;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  background-color: gold;
+  transition: width 0.5s, height 0.5s, transform 0.2s;
+}
+.ranking-items:hover {
+  transform: rotate(-3deg);
+}
+.ranking-number {
+  font-size: 1vw;
+  border: black 2px solid;
+  background-color: white;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  width: -moz-fit-content;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+}
+.favourite-items-left {
+  background-color: gold;
+  border: black 3px solid;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+}
+.favourite-items-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.favourite-pricechange-icon-green {
+  color: rgb(14 216 14);
+  scale: 1.5;
+}
+.favourite-pricechange-icon-red {
+  color: red;
+  scale: 1.5;
+}
+
+.aList {
+  display: flex;
+  flex-direction: column;
+}
+
+.a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.a:hover {
+  color: rgb(85 52 255);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2vw;
+  font-weight: bolder;
+}
+
+.a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.a:hover:before {
+  opacity: 1;
+}
+
+.a:before {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* ================================================================== */
+/* ========================= COIN CARD related ========================= */
+.searched-coin-list {
+  width: 50%;
+  background-color: rgb(85 52 255);
+  box-shadow: 0px 4px 5px #18191b;
+  border: black 3px solid;
+  margin-bottom: auto;
+  margin-right: 20vw;
+}
+#searched-coin-list-default {
+  background-color: rgb(42, 43, 50);
+  position: relative;
+  padding: 5px 10px;
+  color: rgb(189, 189, 189);
+}
+#coin-inner-boxes-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+
+.coin-inner-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.7rem 1rem;
+  background-color: gold;
+  border: black 3px solid;
+}
+.data-content-header {
+  /* margin-right: 10px; */
+  padding-left: 40%;
+  font-size: 2.5vw;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.favourite-icon {
+  color: black;
+  scale: 2;
+}
+.favourite-icon-delete {
+  color: red;
+  scale: 2;
+}
+.favourite-icon:hover {
+  transform: scale(1.2);
+  color: rgba(78, 43, 255, 0.8);
+  cursor: pointer;
+}
+.favourite-icon-delete:hover {
+  transform: scale(1.2);
+  color: rgba(78, 43, 255, 0.8);
+  cursor: pointer;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -0.5px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-0.5px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+  40% {
+    transform: translate(0.5px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 0.5px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-0.5px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(0.5px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-0.5px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 0.5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -0.5px) rotate(-1deg);
+  }
+}
+
+/* ========================= Card 2nd row ========================= */
+.coin-image {
+  scale: 1.5;
+  width: 20%;
+  margin-right: 1.3vw;
+  margin-left: 0.5vw;
+}
+
+.rank-box {
+  margin-top: 4px;
+  display: flex;
+}
+
+.rank-icon {
+  background-color: white;
+  padding: 0.5vh;
+  border: 2px solid black;
+  font-family: "Outfit", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+
+.data-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.data-content-left {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.data-content-right {
+  display: flex;
+  justify-content: center;
+}
+
+.data-content-results-font {
+  margin-right: 10px;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+}
+.data-content-results-font-price {
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 5vw;
+  font-weight: bolder;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+/* ========================= Card 3rd row ========================= */
+.data2-content {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-gap: 4%;
+  width: 100%;
+}
+
+.data2-content-fonts {
+  font-size: 1.2vw;
+  color: white;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+}
+#data2-content-results-fonts {
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2vw;
+  font-weight: normal;
+}
+
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  padding-bottom: 2%;
+  /* background-color: rgba(37, 37, 37, 0.5); */
+}
+.data2-content-results-fonts-error {
+  color: red;
+  font-family: "Outfit", sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+}
+.data2-error-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+.data2-error-icon {
+  transform: scale(1.3);
+  margin-right: 0.5vw;
+}
+
+/* ================= Vault bottom half ====================== */
+.finger-pointing-box {
+  position: absolute;
+  right: 0vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 20%;
+  margin-top: 1vh;
+}
+.finger-pointing-image {
+  height: 20vh;
+}
+
+.vault-bottom-half {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.thumbsup-box {
+  position: absolute;
+  right: 0vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  max-height: 15vh;
+}
+.thumbsup-box-left {
+  position: absolute;
+  left: 0vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  max-height: 15vh;
+}
+.thumbsup-box-fav {
+  position: absolute;
+  top: 30vh;
+  right: 0vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  max-height: 15vh;
+}
+.thumbsup-box-fav-left {
+  position: absolute;
+  top: 30vh;
+  left: 0vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  max-height: 15vh;
+}
+
+.thumbsup {
+  height: 18vh;
+  z-index: +1;
+}
+.thumbsup:hover {
+  transform: scaley(-1);
+}
