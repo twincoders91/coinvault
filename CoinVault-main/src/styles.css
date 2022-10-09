@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1.25rem;
-  min-height: 150vh;
+  min-height: 91vh;
   background: url("./assets/cryptoBackground2.jpeg") no-repeat center
     center/cover;
   height: fit-content;
@@ -38,6 +38,27 @@ body {
 /* ================================================================== */
 
 /* ========================= MAIN-BOX related ========================= */
+.main-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(71, 36, 250, 0.8);
+  padding: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 1vw;
+  border: 3px solid black;
+}
+.home--page--icon--search {
+  color: gold;
+  scale: 1;
+}
+.home--page--icon--search:hover {
+  color: white;
+  scale: 1.25;
+  cursor: pointer;
+  transition: ease-out;
+}
 
 .main-box {
   display: flex;
@@ -47,8 +68,8 @@ body {
 .main-content {
   display: flex;
   justify-content: center;
-  margin-bottom: 3%;
-  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 .search--input {
   border: solid 2px black;
@@ -60,10 +81,11 @@ body {
   width: 30vw;
   padding: 0.5vw;
   font-size: 1.2vw;
+  margin-right: 10px;
 }
 .search--input:hover {
   color: black;
-  background-color: rgba(71, 36, 250, 0.8);
+  background-color: rgba(43, 220, 255, 0.8);
   border: 2px solid rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
   font-family: "Outfit", sans-serif;
@@ -97,6 +119,7 @@ body {
   padding: 1vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .nav-favourite {
   background-color: rgb(85 52 255);
@@ -117,15 +140,19 @@ body {
 .ranking-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   border: solid 3px black;
   margin-bottom: 5px;
-  padding-bottom: 5px;
   background-color: gold;
+  width: 100%;
+  height: 7vh;
+
   transition: width 0.5s, height 0.5s, transform 0.2s;
 }
 .ranking-items:hover {
   transform: rotate(-3deg);
+  background-color: rgba(43, 220, 255, 0.8);
+  cursor: pointer;
 }
 .ranking-number {
   font-size: 1vw;
@@ -166,6 +193,8 @@ body {
 .aList {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 90%;
 }
 
 .a {
@@ -178,12 +207,6 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: center;
-}
-.a:hover {
-  color: rgb(85 52 255);
-  font-family: "Outfit", sans-serif;
-  font-size: 1.2vw;
-  font-weight: bolder;
 }
 
 .a:before {
@@ -253,19 +276,19 @@ body {
 }
 .favourite-icon {
   color: black;
-  scale: 2;
+  transform: scale(2);
 }
 .favourite-icon-delete {
   color: red;
-  scale: 2;
+  transform: scale(2);
 }
 .favourite-icon:hover {
-  transform: scale(1.2);
+  transform: scale(2);
   color: rgba(78, 43, 255, 0.8);
   cursor: pointer;
 }
 .favourite-icon-delete:hover {
-  transform: scale(1.2);
+  scale: 2;
   color: rgba(78, 43, 255, 0.8);
   cursor: pointer;
   animation: shake 0.5s;
@@ -305,6 +328,11 @@ body {
   100% {
     transform: translate(1px, -0.5px) rotate(-1deg);
   }
+}
+
+.id-alert {
+  color: red;
+  margin-left: 0.5vw;
 }
 
 /* ========================= Card 2nd row ========================= */

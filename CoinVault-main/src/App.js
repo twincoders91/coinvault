@@ -8,7 +8,7 @@ import Favourites from "./Pages/Favourites";
 const App = () => {
   const [watchListApp, setWatchListApp] = useState([]);
   const [watchListClicked, setWatchListClicked] = useState(false);
-  const [userInput, setUserInput] = useState(null);
+  const [userInput, setUserInput] = useState("bitcoin");
   const [sortClick, setSortClick] = useState(false);
   const [sortClickPrice, setSortClickPrice] = useState(false);
 
@@ -59,8 +59,6 @@ const App = () => {
     setSortClickPrice(false);
   };
   console.log(watchListApp);
-  console.log(`sortclickprice ${sortClickPrice}`);
-  console.log(`sortclickname ${sortClick}`);
   //=================================================================
 
   return (

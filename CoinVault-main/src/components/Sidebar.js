@@ -9,16 +9,14 @@ const Sidebar = (props) => {
           <div className="aList">
             {props.topCoin.map((item) => {
               return (
-                <div className="ranking-items" key={item.id}>
-                  <p className="ranking-number">Rank #{item.rank}</p>
-                  <a
-                    className="a"
-                    href={item.explorer}
-                    target="_blank"
-                    key={item.id}
-                  >
-                    {item.symbol}
-                  </a>
+                <div
+                  className="ranking-items"
+                  key={item.id}
+                  onClick={() => {
+                    props.handleTop5Click(item.id);
+                  }}
+                >
+                  <div className="a">{item.symbol}</div>
                 </div>
               );
             })}

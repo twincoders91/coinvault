@@ -1,4 +1,6 @@
 import React from "react";
+import { UilSearchAlt } from "@iconscout/react-unicons";
+import "../styles.css";
 
 const MainContent = (props) => {
   return (
@@ -14,6 +16,14 @@ const MainContent = (props) => {
             onChange={props.handleSetSearch}
           />
         </form>
+        <div className="search-button-box">
+          <UilSearchAlt
+            className="home--page--icon--search"
+            id="search-icon"
+            size={30}
+            onClick={props.handleSearch}
+          />
+        </div>
       </div>
     </main>
   );
