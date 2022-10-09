@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./modal.css";
-import { UilMinusSquare } from "@iconscout/react-unicons";
+import { UilTimesSquare } from "@iconscout/react-unicons";
 //install react-chartjs-2, npm install --save chart.js react-chartjs-2
 //install moment for time data, npm install moment --save
 //The parser converts an HTML string to one or more React elements.
@@ -90,8 +90,8 @@ const Modal = (props) => {
             label: `Price over past ${day} day(s)`,
             data: coinChartData.map((item) => item.y),
             color: "white",
-            borderColor: "gold",
-            backgroundColor: "rgb(0, 0, 0, 0.3)",
+            borderColor: "white",
+            backgroundColor: "rgb(255, 217, 0, 0.8)",
             borderWidth: 1.5,
             hoverBorderWidth: 3,
           },
@@ -184,10 +184,10 @@ const Modal = (props) => {
                 {/* <p onClick={props.closeModal} className="closeBtn">
               X
             </p> */}
-                <UilMinusSquare
+                <UilTimesSquare
                   onClick={props.closeModal}
                   className="closeBtn"
-                ></UilMinusSquare>
+                ></UilTimesSquare>
                 <div className="coin-details-header2">
                   <h3 className="coin-details-header">
                     {props.coinDetails.name}
