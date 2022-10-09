@@ -505,4 +505,5 @@ p {
 }
 .thumbsup:hover {
   transform: scaley(-1);
+  cursor: pointer;
 }
