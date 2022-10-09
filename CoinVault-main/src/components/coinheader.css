@@ -10,16 +10,25 @@
   padding-left: 0.5vw;
   transition: width 1s, height 1s, transform 1s;
 }
+.coin-icons {
+  height: 3.5vw;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+  transition: width 0.2s, height 0.2s, transform 0.2s;
+}
+.coin-icons:hover {
+  transform: rotate(10deg);
+}
 .coin-icons-easter-egg {
   height: 3.5vw;
   padding-right: 0.5vw;
   padding-left: 0.5vw;
-  transition: width 1s, height 1s, transform 1s;
+  transition: width 0.2s, height 0.2s, transform 0.2s;
 }
 
 .coin-icons-easter-egg:hover {
   scale: 1.1;
   cursor: pointer;
   filter: invert(1);
-  transform: rotate(30deg);
+  transform: rotate(10deg);
 }
