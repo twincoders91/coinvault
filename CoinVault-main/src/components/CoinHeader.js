@@ -5,7 +5,7 @@ const CoinHeader = (props) => {
   return (
     <div className="coin-icon-box">
       <img
-        className="coin-icons"
+        className="coin-icons-easter-egg"
         src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
         alt="coin-icon-images"
         onClick={props.handleOpenModalGif1}
@@ -16,7 +16,7 @@ const CoinHeader = (props) => {
         alt="coin-icon-images"
       />
       <img
-        className="coin-icons"
+        className="coin-icons-easter-egg"
         src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256"
         alt="coin-icon-images"
         onClick={props.handleOpenModalGif2}

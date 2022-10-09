@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { UilSave } from "@iconscout/react-unicons";
 import { UilTrashAlt } from "@iconscout/react-unicons";
 
@@ -11,7 +11,6 @@ const CoinCard = (props) => {
   //===================== through Button onClick ======================
   function watchList() {
     const x = props.coinList;
-    console.log(props.coinList);
 
     return (
       <>

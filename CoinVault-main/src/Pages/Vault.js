@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles.css";
 import Sidebar from "../components/Sidebar";
 import MainContent from "../components/MainContent";
@@ -18,9 +18,16 @@ export default function Vault(props) {
   //========================= TOP 5 COINS ===========================
   //=================================================================
   const getTopCoin = async (url) => {
-    const res = await fetch(`https://api.coincap.io/v2/assets`);
+    // const res = await fetch(`https://api.coincap.io/v2/assets`);
+    const res = await fetch(
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`
+    );
     const data = await res.json();
-    setTopCoin(data.data.slice(0, 5));
+    setTopCoin(data.slice(0, 5));
+  };
+  const handleTop5Click = (item) => {
+    props.setUserInput(item);
+    console.log(item);
   };
 
   useEffect(() => {
@@ -49,7 +56,7 @@ export default function Vault(props) {
       const data = await res.json();
       setCoinList(data);
       console.log("data");
-      console.log(data);
+      console.log(coinList);
     } catch (e) {
       console.log("error");
     }
@@ -60,10 +67,18 @@ export default function Vault(props) {
   //=================================================================
   let watchListClicked = props.watchListClicked;
   let setWatchListClicked = props.setWatchListClicked;
+  const scrollBottom = useRef(null);
 
   const addToCart = (item) => {
     props.setWatchListApp([...props.watchListApp, item]);
     setWatchListClicked(true);
+
+    scrollBottom.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "center",
+      alignToTop: false,
+    });
   };
   const watchListFromApp = props.watchListApp;
 
@@ -113,7 +128,7 @@ export default function Vault(props) {
           </div>
           <div className="main-body-with-sidebar-coincard">
             <div className="sidebar-box">
-              <Sidebar topCoin={topCoin} />
+              <Sidebar topCoin={topCoin} handleTop5Click={handleTop5Click} />
             </div>
             <div className="searched-coin-list">
               {coinList.market_data ? (
@@ -126,12 +141,18 @@ export default function Vault(props) {
                   setIsShown={setIsShown}
                 />
               ) : (
-                <CoinCardError coinList={coinList} addToCart={addToCart} />
+                <>
+                  <CoinCardError coinList={coinList} addToCart={addToCart} />
+                </>
               )}
             </div>
             <div className="finger-pointing-box">
-              {isShown && props.watchListApp.length == 0 ? (
-                <img className="finger-pointing-image" src={fingerpoint} />
+              {isShown && props.watchListApp.length === 0 ? (
+                <img
+                  className="finger-pointing-image"
+                  src={fingerpoint}
+                  alt="addtovault"
+                />
               ) : (
                 <></>
               )}
@@ -139,9 +160,10 @@ export default function Vault(props) {
           </div>
         </div>
 
-        <div>
+        <div ref={scrollBottom}>
           {watchListClicked ? (
             <WatchList
+              id="watchList"
               removeFromCart={removeFromCart}
               setOpenModal={setOpenModal}
               openModal={openModal}
@@ -159,6 +181,7 @@ export default function Vault(props) {
           coinDetails={coinDetails}
         />
       </div>
+      <div ref={scrollBottom}></div>
     </>
   );
 }

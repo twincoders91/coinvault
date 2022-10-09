@@ -2,14 +2,12 @@
   background-color: rgb(66, 37, 211, 1);
 }
 .Navbar {
-  /* padding-right: 3vw; */
   height: 7vh;
   display: flex;
   padding: 1vw;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  /* background: rgba(78, 43, 255, 1); */
 }
 .navBar-links {
   color: white;

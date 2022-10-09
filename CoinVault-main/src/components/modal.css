@@ -107,16 +107,17 @@
 }
 
 .closeBtn {
+  transform: scale(1.5);
   cursor: pointer;
   position: fixed;
   top: 2%;
   right: 2%;
-  color: white;
+  color: gold;
 }
 
 .closeBtn:hover {
-  transform: scale(1.05);
-  color: gold;
+  transform: scale(1.6);
+  color: rgba(43, 220, 255, 0.8);
 }
 .day-button-box {
   display: flex;
